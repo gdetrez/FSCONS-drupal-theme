@@ -153,3 +153,55 @@ function STARTERKIT_preprocess_block(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
+
+// *** Activity stream theming
+// this first function is the same as the default one but patched 
+// to avoid a warning:
+function fscons_activitystream_header($action) {
+  return '<h3 class="datehead">' . format_date($action->created, 'medium') . '</h3>';
+}
+
+function fscons_activitystream_item($action) {
+  $node = node_load($action->nid);
+  $date = theme('activitystream_date',$node->created);
+  $user = activitystream_user_load($node->uid);
+  $name = theme('activitystream_username',$user);
+  if (function_exists('theme_'.$action->module .'_icon')) {
+    $theme_function = $action->module .'_icon';
+  } 
+  else {
+    $theme_function = 'activitystream_icon';
+  }
+  return '<span class="activitystream-item">zz'. theme($theme_function) ." <span>$name ". l($node->title, 'node/'. $node->nid) ." <span class=\"activitystream-created\">$date</span></span>". l('#', 'node/'. $node->nid, array('class' => 'permalink')) ."</span>\n";
+}
+
+function fscons_twitter_search_feeds_item($activity) {
+  $node = node_load($activity->nid);
+  $date = theme('activitystream_date', $node->created);
+  $user = activitystream_user_load($node->uid);
+  $title = twitter_search_feeds_makelinks($node->title);
+  $name = theme('activitystream_username', $user);
+   return '<span class="activitystream-item">'. theme('twitter_search_feeds_icon') ." <span> ". $title ."\" <span class=\"activitystream-created\">$date</span></span>". l('#', 'node/'. $node->nid, array('class' => 'permalink')) .'</span>';
+}
+
+/* function fscons_activitystream_identica_icon() { */
+/*   //return theme('image', drupal_get_path('module', 'activitystream_identica') .'/identica.png', 'Identi.ca'); */
+/*   return "test"; */
+/* } */
+
+function fscons_activitystream_identicagroup_item($activity) {
+  $node = node_load($activity->nid);
+  $date = theme('activitystream_date', $node->created);
+  $user = activitystream_user_load($node->uid);
+  $name = theme('activitystream_username', $user);
+  return '<span class="activitystream-item">'. theme('activitystream_identicagroup_icon') .' <span>'." ". l($node->title, $activity->link) .'<span class="activitystream-created">'. $date .'</span></span>'. l('#', 'node/'. $node->nid, array('class' => 'permalink')) .'</span>';
+}
+
+/* function fscons_activitystream_identicagroup_item($activity) { */
+/*   $node = node_load($activity->nid); */
+/*   $date = theme('activitystream_date', $node->created); */
+/*   $user = activitystream_user_load($node->uid); */
+/* //  $name = theme('activitystream_username', $user); */
+/*   return '<span class="activitystream-item">'. theme('activitystream_identica_icon') .'icon? <span>'." ". l($node->title, $activity->link) .'<span class="activitystream-created">'. $date .'</span></span>'. l('#', 'node/'. $node->nid, array('class' => 'permalink')) .'</span>'; */
+/* } */
+

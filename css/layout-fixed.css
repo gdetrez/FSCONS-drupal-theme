@@ -184,7 +184,6 @@ body {
 .region-sidebar-second {
   float: left; /* LTR */
   width: 240px;
-  background:red;
   margin-left: 720px; /* LTR */ /* Width of content + sidebar-first. */
   margin-right: -960px; /* LTR */ /* Negative value of .region-sidebar-second's width + left margin. */
   padding: 0; /* DO NOT CHANGE. Add padding or margin to .region-sidebar-second .section. */

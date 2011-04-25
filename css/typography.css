@@ -1,0 +1,129 @@
+@import url("http://fonts.googleapis.com/css?family=Copse");
+@import url("http://fonts.googleapis.com/css?family=Amaranth");
+@import url("http://fonts.googleapis.com/css?family=Expletus+Sans");
+
+/* Main font settings.
+ * 
+ * Set the default font size and line height.
+ */  
+#page {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* grid */
+#main {
+    background: transparent url("../images/grid.png") center -4px;
+}
+
+/* some resets */
+p, ol, ul {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top:0;
+    margin-bottom: 24px;
+}
+
+.sidebar {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+/*------------------------------------*\
+  TYPE
+\*------------------------------------*/
+/*--- PARAGRAPHS ---*/
+
+p {
+  margin-top: 0;
+  margin-bottom: 1.5em; /* same as line-height */
+}
+
+/*--- HEADINGS ---*/
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: bold;
+  font-family: 'Copse', arial, serif; 
+  font-family: 'Amaranth', arial, serif; 
+//  font-family: 'Expletus Sans', arial, serif; 
+  font-family: 'Ubuntu', arial, serif; 
+}
+
+h1 {
+  font-size: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
+  line-height: 24px; /* 24px --> 24 ÷ 24 = 1 */
+}
+
+h2 {
+  font-size: 1.375em; /* 22px --> 22 ÷ 16 = 1.375 */
+  line-height: 24px; /* 24px --> 24 ÷ 22 = 1.090909(09) */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px --> 20 ÷ 16 = 1.25 */
+  line-height: 24px; /* 24px --> 24 ÷ 20 = 1.2 */
+}
+
+h4 {
+  font-size: 1.125em; /* 18px --> 18 ÷ 16 = 1.125 */
+  line-height: 1.333em; /* 24px --> 24 ÷ 18 = 1.3333333(3) */
+}
+
+h5, h6 {
+  font-size: 1em; /* 16px --> 16 ÷ 16 = 1 */
+  line-height: 1.5em; /* 24px --> 24 ÷ 16 = 1.5 */
+}
+
+*--- PARAGRAPHS ---*/
+p {
+  margin-bottom: 24px;
+}
+
+
+p {
+  margin-bottom: 24px;
+}
+
+
+p+p {
+  text-indent: 1em;
+  margin-top: -24px;
+}
+
+
+/*--- LINKS ---*/
+a {
+  color: #09f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active,
+a:focus {
+  position: relative;
+  top: 1px;
+}
+
+.comment_add:after {
+  content: "\00A0\000BB"; /* Insert a space then right angled-quote */
+}
+
+
+.submitted {
+    font-size: 0.75em; /* 14px --> 14 ÷ 16 = 0.75 */
+    line-height: 2em; /* 24px --> 24 ÷ 12 = 2 */
+    font-style: italic;
+    font-family: 'Ubuntu', arial, serif; 
+    margin-top: -24px; /* glue to title */
+    display: block;
+    margin-bottom:24px;
+    color:gray;
+}
+
+body {
+/*background: #fff url("http://media.smashingmagazine.com/cdn_smash/wp-content/uploads/technical-type/img/css/grid.png") center -6px repeat-y; /**/
+}

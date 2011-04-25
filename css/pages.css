@@ -16,13 +16,9 @@ body {
   padding: 0;
 }
 
-#page-wrapper {
-}
+#page-wrapper {}
 
-#page {
-  font-size: 16px;
-  lint-height: 24px;
-}
+#page {}
 
 /*
  * The skip navigation link will be completely hidden until a user tabs to the
@@ -110,9 +106,9 @@ div#site-name /* The name of the website */ {
  */
 #main-wrapper {
     margin-top: 48px;
-    background: none repeat scroll 0 0 whiteSmoke;
-    border-radius: 5px 5px 5px 5px;
-    box-shadow: 0 0 10px #999999;
+    /* background: none repeat scroll 0 0 whiteSmoke; */
+    /* border-radius: 5px 5px 5px 5px; */
+    /* box-shadow: 0 0 10px #999999; */
 }
 
 #main {
@@ -140,9 +136,7 @@ div#site-name /* The name of the website */ {
 
 h1.title, /* The title of the page */
 h2.title, /* Block title or the title of a piece of content when it is given in a list of content */
-h3.title /* Comment title */ {
-  margin: 0;
-}
+h3.title /* Comment title */ {}
 
 tr.even /* Some tables have rows marked even or odd. */ {
   /* background-color: #eee; */ /* Drupal core uses a #eee background */

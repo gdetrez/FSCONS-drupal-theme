@@ -222,6 +222,10 @@ ul.links li {
 .region-content-bottom /* Wrapper for any blocks placed in the "content bottom" region */ {
 }
 
+
+.sidebar {
+    border: thin #eee solid;
+}
 /*
  * First sidebar (on left in LTR languages, on right in RTL)
  *

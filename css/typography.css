@@ -12,9 +12,9 @@
 }
 
 /* grid */
-#main {
-    background: transparent url("../images/grid.png") center -4px;
-}
+/* #main { */
+/*     background: transparent url("../images/grid.png") center -4px; */
+/* } */
 
 /* some resets */
 p, ol, ul {

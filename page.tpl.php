@@ -180,13 +180,18 @@
 
     <div id="main-wrapper"><div id="main" class="clearfix<?php if ($sidebar_first && $sidebar_second) { print ' two-sidebars'; } elseif ($sidebar_first ) { print ' sidebar-first'; } elseif ($sidebar_second) { print ' sidebar-second'; } else { print ' no-sidebars'; } ?>">
 
+   <!-- This is the highlight region. --> 
+   <?php if ($highlight): ?>
+   <div id="highlight">
+   <?php print $highlight; ?>
+   </div>
+   <?php endif; ?>
+
       <div id="content" class="column"><div class="section">
 
         <?php if ($mission): ?>
           <div id="mission"><?php print $mission; ?></div>
         <?php endif; ?>
-
-        <?php print $highlight; ?>
 
         <?php print $breadcrumb; ?>
         <?php if ($title): ?>

@@ -80,16 +80,10 @@ p {
   margin-bottom: 24px;
 }
 
-
-p {
-  margin-bottom: 24px;
-}
-
-
-p+p {
-  text-indent: 1em;
-  margin-top: -24px;
-}
+/* p+p { */
+/*   text-indent: 1em; */
+/*   margin-top: -24px; */
+/* } */
 
 
 /*--- LINKS ---*/

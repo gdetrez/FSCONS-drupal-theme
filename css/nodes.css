@@ -79,3 +79,42 @@
 .preview .node /* Preview of the content before submitting new or updated content */ {
   /* background-color: #ffffea; */ /* Drupal core uses a #ffffea background */
 }
+
+
+/* ANNOUNCES */
+.announce {
+    position: relative;
+    padding: 72px 0px 0px 0px;
+    margin-bottom:24px;
+}
+
+.field-field-image-announcement {
+    position: absolute;
+    top:0;
+    left: 90px;
+    width:220px;
+    overflow: hidden;
+}
+
+.announce-inside {
+    background: #fcd116;
+    padding: 24px 24px 24px 330px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 10px #999999;
+}
+
+.announce a.button {
+    color:white;
+    font-weight: bold;
+    display: block;
+    float:right;
+    background: maroon;
+    padding: 2px 5px 2px;
+    margin-bottom:18px;
+    position: relative;
+    top: -2px;
+    box-shadow: 0px 0px 10px #111;
+    border-radius: 5px;
+    text-align: center;
+
+}

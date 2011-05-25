@@ -75,10 +75,10 @@
    <div class="announce-inside clearfix">
    <?php if (!$page && $title): ?>
    <h2 class="title">
-     <a href="<?php print $node_url; ?>"><?php print $title; ?></a>
+     <?php print $title; ?>
    </h2>
    <?php endif; ?>
    <?php print $content; ?>
-    <a href="<?php print $field__announce_button_url[0]['safe'] ; ?>" class="button"><?php print $field__announce_button_label[0]['safe'] ; ?></a>
+    
     </div>
 </div><!-- /.node -->

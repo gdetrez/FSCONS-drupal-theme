@@ -144,5 +144,9 @@ padding: 2px 5px;
     box-shadow: 0px 0px 10px #111;
     border-radius: 5px;
     text-align: center;
+}
 
+/* Fixes */
+.uc_out_of_stock_throbbing {
+    display:none;
 }

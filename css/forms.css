@@ -32,7 +32,10 @@
 
 .form-item .description /* The descriptive help text (separate from the label) */ {
   font-size: 0.85em;
+  color: gray;
+  font-style: italic;
 }
+
 
 .form-checkboxes .form-item,
 .form-radios .form-item /* Pack groups of checkboxes and radio buttons closer together */ {
@@ -48,6 +51,9 @@
 }
 
 .tips /* Tips for Drupal's input formats */ {
+  font-size: 0.85em;
+  color: gray;
+  font-style: italic;
 }
 
 
